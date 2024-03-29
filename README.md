@@ -33,12 +33,9 @@ To install and run the React Dashboard App locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/omaah2/Fastra.git
+git clone https://github.com/omaah2/Fastra
 ```
 
 
 ## Todos
-
-- add few smooth animation.
-- 404 page - done ✔✔
 - more features yet to come.
