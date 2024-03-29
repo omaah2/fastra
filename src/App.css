@@ -1,38 +1,268 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.side-bar {
+  background: linear-gradient(180deg, #09285d, #020a17 100%);
+  width: 100%;
+  max-width: 240px;
+  transition: left 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.show {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  margin-top: 30px;
+}
+
+.menu {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 30px 10px;
+  line-height: 3em;
+}
+
+.icons {
+  color: white;
+  font-size: 30px;
+}
+
+.link,
+.mobile_link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-bar {
+  display: flex;
+  gap: 1em;
+}
+
+.menu-bar:hover {
+  background-color: #3b7ced;
+  width: 100%;
+  height: 56px;
+  max-width: 100%;
+}
+
+.setting-container {
+  position: absolute;
+  bottom: 0;
+
+  margin-top: 20rem;
+  margin-bottom: 20px;
+}
+
+.main-bar {
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.main-bar_top,
+.h-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 0.8em;
+  margin-bottom: 3rem;
+}
+
+.test {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.main-bar_content {
+  margin-right: 10px;
+}
+
+.main-bar_side {
+  margin-left: 10px;
+}
+
+.activity > h1 {
+  margin: 50px 10px 10px 20px;
+}
+.activity .circle {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+  margin-left: 20px;
+}
+
+.card {
+  display: flex;
+  gap: 1.2em;
+  height: 64px;
+  width: 840px;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 15px 10px;
+  border: 1px solid #dfe3e8;
+  background-color: #ffffff;
+}
+
+.card > span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+
+.admin {
+  display: flex;
+  gap: 1em;
+  width: 200px;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #dfe3e8;
+  background-color: #ffffff;
+  font-size: 15px;
+}
+
+.admin h2 {
+  color: #1a1a1a;
+}
+
+.admin p {
+  color: #7a8a98;
+  font-size: 14px;
+}
+
+.one {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contact {
+  margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  color: #fff;
+  font-size: 24px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hamburger-menu {
+    display: block;
+    color: blue;
+  }
+
+  .side-bar {
+    position: fixed;
+    top: 0;
+    left: -240px;
+    width: 240px;
+    height: 100%;
+    background: linear-gradient(180deg, #09285d, #020a17 100%);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .side-bar.show {
+    left: 0;
+  }
+
+  .main-bar {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .menu {
+    margin: 30px 10px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .setting-container {
+    margin-bottom: 20px;
+  }
+
+  .link,
+  .mobile-link {
+    flex-direction: column;
+  }
+
+  .menu-bar {
+    width: 100%;
+  }
+
+  .menu-bar:hover {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    max-width: none;
+  }
+
+  .test {
+    flex-direction: column;
+  }
+
+  .main-bar_top,
+  .h-admin {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-bar_content,
+  .main-bar_side {
+    margin: 0;
+    width: 100%;
+  }
+
+  .activity > h1 {
+    margin: 20px 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+    margin: 20px 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .admin {
+    width: 100%;
+  }
+
+  .contact {
+    margin-top: 20px;
   }
 }
