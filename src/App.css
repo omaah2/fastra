@@ -213,11 +213,7 @@
     margin-bottom: 20px;
   }
 
-  .link,
-  .mobile-link {
-    flex-direction: column;
-  }
-
+ 
   .menu-bar {
     width: 100%;
   }
